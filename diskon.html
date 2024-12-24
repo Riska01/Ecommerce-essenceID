@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaim Diskon</title>
+    <link rel="stylesheet" href="css/diskon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+       <!--<h1 class="title">Klaim Diskon Anda Sekarang!</h1>--> 
+        <div class="card">
+            <div class="card-header">
+                <h2>Diskon 70%</h2>
+            </div>
+            <div class="card-body">
+                <p>Nikmati diskon besar-besaran untuk semua varian parfum! Jangan lewatkan kesempatan ini.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Berlaku untuk semua produk</li>
+                    <li><i class="fas fa-check"></i> Hanya berlaku sampai akhir bulan</li>
+                    <li><i class="fas fa-check"></i> Tidak dapat digabungkan dengan promo lain</li>
+                </ul>
+                <button id="claim-button" class="claim-btn">Klaim Diskon</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Event listener untuk tombol "Klaim Diskon"
+        document.getElementById("claim-button").addEventListener("click", function () {
+            alert("Selamat! Anda telah mendapatkan diskon 70%");
+            window.location.href = "dafpromo.html"; // Ganti dengan link beranda yang sesuai
+        });
+    </script>
+</body>
+</html>

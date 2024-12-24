@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EssenceID</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/chart.css" />
+    <script src="https://use.fontawesome.com/dfba0bb4d8.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/banner/logo.png" class="logo" alt="" /></a>
+
+      <div>
+        <ul id="navbar">
+          <a href="#" id="close"><i class='fa fa-close'></i></a>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="dafpromo.html">Vocher</a></li>
+          <li><a href="login.html">Logout</a></li>
+          <li id="lg-parfume"><a class="active" href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+      </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"
+          ><i class="fa fa-shopping-bag" aria-hidden="true"></i
+        ></a>
+        <i id="bar" class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+      <h2>Keranjang anda</h2>
+      <p> </p>
+      <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </section>
+
+    <!-- <section id="contact-details" class="section-p1">
+        <div class="details">
+            <h2>Your Cart is Empty</h2>
+    </section> -->
+
+    <!-- cart items details-->
+    <div class="small-container">
+      <table>
+        <tr>
+          <th>Produk</th>
+          <th>Jumlah</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="img/product/P1.png" alt="Tshirt" />
+              <div>
+                <p>Carl & Claire - Spring Sonata EDP 30ml</p>
+                <small>Rp. 279.000</small>
+                <br />
+                <a href="#">Remove</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>Rp. 279.000 </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="img/product/c&c.png" alt="Tshirt" />
+              <div>
+                <p>Carl & Claire Take My Hand EDP 30ml</p>
+                <small>Rp. 285.000</small>
+                <br />
+                <a href="#">Remove</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1"/></td>
+          <td>Rp. 285.000</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="img/product/P2.png" alt="Tshirt" />
+              <div>
+                <p>Brodo - SELATAN Extrait De Perfume</p>
+                <small>Rp. 285.000</small>
+                <br />
+                <a href="#">Remove</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td>Rp. 285.000</td>
+        </tr>
+      </table>
+
+      <div class="total-price">
+        <table>
+          <tr>
+            <td>Masukan Vocher</td>
+            <td>
+              <select id="payment-method" name="payment-method">
+                <option value="Indomaret">Diskon 70%</option>
+                <option value="Alfamart">Diskon Ongkir</option>
+                <option value="Gopay">Diskon 20%</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Subtotal</td>
+            <td>Rp. 855.000</td>
+          </tr>
+          <tr>
+            <td>Biaya Penanganan</td>
+            <td>Rp. 10.000</td>
+          </tr>  
+          <tr>
+            <td>Metode Pembayaran</td>
+            <td>
+              <select id="payment-method" name="payment-method">
+                <option value="Indomaret">Indomaret</option>
+                <option value="Alfamart">Alfamart</option>
+                <option value="Gopay">Gopay</option>
+                <option value="Shopeepay">Shopeepay</option>
+                <option value="OVO">OVO</option>
+                <option value="Transfer Bank">Transfer Bank</option>
+                <option value="M-Banking">M-Banking</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>Rp. 865.000
+            </td>
+          </tr>
+        
+        
+        </table>
+
+      </div>        
+      <div class="checkout-container">
+          <button class="checkout-btn" onclick="showModal()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 class="modal-header">Konfirmasi Pesanan</h2>
+    <div class="modal-body">
+      <p class="invoice">No. Invoice: INV-20241202-001</p>
+      <p class="website-name">Website: EssenceID</p>
+      <div class="order-details">
+        <h3>Detail Pembelian</h3>
+        <ul>
+          <li>1. Carl & Claire - Spring Sonata EDP 30ml</li>
+          <li>Jumlah: 1</li>
+          <li>Harga: Rp. 279.000</li>
+        </ul>
+
+        <ul>
+          <li>2. Carl & Claire Take My Hand EDP 30ml</li>
+          <li>Jumlah: 1</li>
+          <li>Harga:Rp. 285.000 </li>
+        </ul>
+
+        <ul>
+          <li>3. Brodo - SELATAN Extrait De Perfume</li>
+          <li>Jumlah: 1</li>
+          <li>Harga: Rp. 285.000 </li>
+        </ul>
+
+        <ul>
+          <li>Biaya Penanganan</li>
+          <li>Rp. 10.000</li>
+        </ul>
+         
+      <div class="payment-method">
+        <h3>Metode Pembayaran</h3>
+        <p>Indomaret</p>
+      </div>
+      <div class="total-price">
+        <p></p>
+        <p>Total Pembayaran   <br><br> Rp. 865.000</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="confirm-btn" onclick="confirmOrder()">Konfirmasi Pesanan</button>
+      <button class="cancel-btn" onclick="closeModal()">Batal</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<section id="form-details">
+      <!--<form action="">
+        <span>Leave a Message</span>
+        <h2>We love to hear from you</h2>
+        <input type="text" placeholder="Enter your name" />
+        <input type="text" placeholder="Enter your Email" />
+        <input type="text" placeholder="Enter your Subjext" />
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <button class="normal">Submit</button>
+      </form> 
+
+      <div class="people">
+        <div>
+          <img src="img/people/1.png" alt="" />
+          <p>
+            <span>John Doe</span> Senior Marketing Manager <br />
+            Phone: +91 1234567890 <br />
+            Email: contact@example.com
+          </p>
+        </div>
+        <div>
+          <img src="img/people/2.png" alt="" />
+          <p>
+            <span>John Doe</span> Senior Marketing Manager <br />
+            Phone: +91 1234567890 <br />
+            Email: contact@example.com
+          </p>
+        </div>
+        <div>
+          <img src="img/people/3.png" alt="" />
+          <p>
+            <span>Jean Doe</span> Senior Marketing Manager <br />
+            Phone: +91 1234567890 <br />
+            Email: contact@example.com
+          </p>
+        </div>
+      </div>
+    </section>-->
+ 
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/banner/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Alamat:</strong> Bekasi</p>
+            <p>
+              <strong>WhatsApp:</strong> 
+              <a href="https://wa.me/6289620261030?text=Hello%20EssenceID" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> +62 0896-2026-1030
+              </a>
+            </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <a href="  https://www.instagram.com/_permen_yupii_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i class="fab fa-instagram"></i></a>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="col">
+            <h4>Informasi</h4>
+            <a href="about.html">Tentang Kami</a>
+            <a href="metpem.html">Metode Pembayaran</a>
+            <a href="privasi.html">Privasi</a>
+        </div>
+    
+        <div class="col">
+            <h4>Akun</h4>
+            <a href="login.html">Masuk</a>
+            <a href="cart.html">Lihat keranjang</a>
+            <a href="pesanan.html">Pesanan</a>
+
+        </div>
+    
+    
+    
+        <div class="copyright">
+            <p>Ecommerce Website EssenceID</p>
+            <p>&copy; 2024 Mawardah & Riska</p>
+        </div> 
+
+      </footer> 
+
+    <script src="script.js"></script>
+  </body>
+</html>

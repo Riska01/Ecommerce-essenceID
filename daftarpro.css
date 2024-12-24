@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+
+
+.logo {
+  max-width: 130px; /* Atur lebar maksimal */
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #131010;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #08522e;
+  outline: none;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+}
+
+/* Promo List */
+.promo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .promo-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .promo-card h2 {
+    font-size: 1.4rem;
+    color: #ff758c;
+    margin-bottom: 10px;
+  }
+  
+  .promo-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer */
+  .promo-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    color: #999;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .promo-link {
+    text-decoration: none; /* Menghilangkan underline */
+    color: inherit; /* Memastikan warna teks mengikuti elemen induk */
+  }
+  
+  .promo-link:hover {
+    text-decoration: none; /* Tetap tanpa garis saat hover */
+    background-color: rgba(255, 117, 140, 0.1); /* Tambahkan efek hover */
+  }
+
+/* Header Start*/
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 80px;
+  background: #d7d4f3;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background-color: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../img/banner/b14.png"); 
+  background-color: #041e42;
+  margin: 0;
+  padding: 0;
+
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  /* border: 4px solid blue; */
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+footer p .fa {
+  /* margin-top: 12px; */
+  /* border: 2px solid red; */
+  font-size: 1.1rem;
+  align-self: flex-start;
+  color: #088178;
+  margin-right: 10px;
+  margin: 5px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #ffffff;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img {
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #7cebe1;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Shop Page*/
+#page-header {
+  background-image: url(../img/banner/b7.jpg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2,
+#page-header p {
+  color: #fff;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*to top*/
+.to-top {
+  background: rgb(219, 45, 45);
+  position: fixed;
+  bottom: 16px;
+  right: 29px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.to-top--title {
+  width: inherit;
+  font-weight: bolder;
+  font-size: 0.6rem;
+  text-align: center;
+  color: inherit;
+  margin: auto;
+}
+
+.to-top--title:hover {
+  transform: scale(1.1);
+}
+
+                        

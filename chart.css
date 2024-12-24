@@ -1,0 +1,642 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+.logo {
+  max-width: 130px; /* Atur lebar maksimal */
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #131010;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #08522e;
+  outline: none;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+}
+
+/*Search*/
+
+
+
+/* Header Start*/
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 80px;
+  background: #d7d4f3;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background-color: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+/* Home Page*/
+
+/*to top*/
+.to-top {
+  background: rgb(219, 45, 45);
+  position: fixed;
+  bottom: 16px;
+  right: 29px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.to-top--title {
+  width: inherit;
+  font-weight: bolder;
+  font-size: 0.6rem;
+  text-align: center;
+  color: inherit;
+  margin: auto;
+}
+
+.to-top--title:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../img/banner/b14.png"); 
+  background-color: #041e42;
+  margin: 0;
+  padding: 0;
+
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  /* border: 4px solid blue; */
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+footer p .fa {
+  /* margin-top: 12px; */
+  /* border: 2px solid red; */
+  font-size: 1.1rem;
+  align-self: flex-start;
+  color: #088178;
+  margin-right: 10px;
+  margin: 5px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #ffffff;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img {
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #7cebe1;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Shop Page*/
+#page-header {
+  background-image: url(../img/banner/banner.png);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2,
+#page-header p {
+  color: #fff;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* Cart Page (cart items details)*/
+.small-container {
+  padding: 50px 30px;
+  width: 80%;
+  margin: auto;
+  /* border: 2px solid red; */
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* border: 3px solid blue; */
+}
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 3px solid green; */
+}
+th {
+  text-align: left;
+  padding: 10px 5px;
+  color: #fff;
+  background-color: rgb(6, 85, 103);
+  font-weight: normal;
+  /* border: 3px solid red; */
+}
+td {
+  padding: 10px 5px;
+  /* border: 2px solid black; */
+}
+td input {
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  /* padding: 8px 3px 8px 7px; */
+}
+td a {
+  color: rgb(6, 85, 103);
+  font-size: 12px;
+  text-decoration: none;
+}
+td img {
+  width: 120px;
+  height: 120px;
+  /* width: 100%; */
+  display: inline-block;
+  margin-right: 10px;
+}
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 2px solid blue; */
+}
+.total-price table {
+  border-top: 3px solid rgb(6, 85, 103);
+  width: 100%;
+  max-width: 400px;
+  /* border: 2px solid red; */
+}
+td:last-child {
+  text-align: right;
+}
+th:last-child {
+  text-align: right;
+}
+.total-price tr:last-child {
+  margin-top: 50px;
+  /* border: 2px solid blue; */
+  /* padding-top: 200px; */
+}
+
+.total-price tr:last-child td {
+  background-color: rgba(6, 85, 103, 0.578);
+  color: #fff;
+  /* margin-top: 0px; */
+}
+
+/* Menambahkan class untuk metode pembayaran */
+.total-price tr:last-child td .payment-method {
+  background-color: rgba(6, 85, 103, 0.578); /* Menyesuaikan dengan warna sebelumnya */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+/* Menambahkan gaya untuk dropdown metode pembayaran */
+.total-price .payment-method select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Styling tombol Checkout */
+.total-price .payment-method button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.total-price .payment-method button:hover {
+  background-color: #218838;
+}
+
+
+
+/*CO*/
+
+.checkout-container {
+    text-align: right; /* Posisi tombol rata kanan */
+    margin-top: 10px;  /* Jarak antara tabel dan tombol */
+  }
+  
+  .checkout-btn {
+    padding: 10px 20px;
+    background-color: rgb(6, 85, 103);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #308081;
+  }
+  
+  
+  /*metode pembayaran*/
+  #payment-method {
+    width: 120px; /* Lebar dropdown */
+    height: auto; /* Tinggi menyesuaikan konten */
+    font-size: 11px; /* Ukuran teks */
+    padding: 8px; /* Tambahkan ruang di dalam dropdown */
+    border: 2px solid #ccc; /* Border yang lebih tebal */
+    border-radius: 5px; /* Sudut melengkung */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    outline: none; /* Hilangkan outline default saat fokus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan untuk estetika */
+  }
+  
+  /*CO*/
+
+.checkout-container {
+  text-align: right; /* Posisi tombol rata kanan */
+  margin-top: 10px;  /* Jarak antara tabel dan tombol */
+}
+
+.checkout-btn {
+  padding: 10px 20px;
+  background-color: rgb(6, 85, 103);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #308081;
+}
+
+
+/*metode pembayaran*/
+#payment-method {
+  width: 120px; /* Lebar dropdown */
+  height: auto; /* Tinggi menyesuaikan konten */
+  font-size: 11px; /* Ukuran teks */
+  padding: 8px; /* Tambahkan ruang di dalam dropdown */
+  border: 2px solid #ccc; /* Border yang lebih tebal */
+  border-radius: 5px; /* Sudut melengkung */
+  background-color: #f9f9f9; /* Warna latar belakang */
+  outline: none; /* Hilangkan outline default saat fokus */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan untuk estetika */
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Background */
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.modal-content {
+background-color: #fff;
+margin: 10% auto;
+padding: 20px;
+border-radius: 10px;
+width: 40%;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+font-family: Arial, sans-serif;
+}
+
+/* Modal Header */
+.modal-header {
+text-align: center;
+font-size: 1.8rem;
+margin-bottom: 10px;
+color: #333;
+}
+
+/* Invoice & Website Name */
+.invoice, .website-name {
+font-size: 1rem;
+color: #555;
+margin-bottom: 15px;
+}
+
+/* Order Details */
+.order-details, .payment-method, .total-price {
+margin-bottom: 20px;
+}
+
+.order-details h3, .payment-method h3, .total-price h3 {
+font-size: 1.2rem;
+color: #222;
+margin-bottom: 5px;
+}
+
+.order-details ul {
+list-style-type: none;
+padding-left: 0;
+}
+
+.order-details li {
+font-size: 0.95rem;
+color: #555;
+margin-bottom: 5px;
+}
+
+/* Payment Method & Total Price */
+.payment-method p, .total-price p {
+font-size: 1rem;
+color: #444;
+font-weight: bold;
+}
+
+/* Modal Footer */
+.modal-footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.confirm-btn, .cancel-btn {
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+}
+
+.confirm-btn {
+background-color: #4CAF50;
+color: white;
+}
+
+.confirm-btn:hover {
+background-color: #45a049;
+}
+
+.cancel-btn {
+background-color: #f44336;
+color: white;
+}
+
+.cancel-btn:hover {
+background-color: #d32f2f;
+}
+
+/* Close Button */
+.close {
+float: right;
+font-size: 1.5rem;
+color: #aaa;
+cursor: pointer;
+}
+
+.close:hover {
+color: black;
+}
